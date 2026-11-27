@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)file:///C:/Users/ariel/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/index.html# -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORI WORLD | Официальный сайт</title>
+    <style>
+        /* Общие настройки в стиле старой бумаги и темного моря */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #0f141d url('https://unsplash.com') no-repeat center top/cover;
+            background-attachment: fixed;
+            color: #1a120b;
+        }
+
+        /* Текстура старой бумаги для блоков сайта */
+        .paper-texture {
+            background-color: #f2e6d0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+            border: 2px solid #3d2b1f;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Шапка сайта */
+        header {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .logo-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-main {
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: #1a120b;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .logo-sub {
+            font-size: 14px;
+            letter-spacing: 8px;
+            color: #8c2d19;
+            text-transform: uppercase;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: #f2e6d0;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #d97724;
+        }
+
+        /* Слоган под шапкой */
+        .promo-line {
+            text-align: center;
+            color: #f2e6d0;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 40px 0;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Главный контейнер для контента */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* Левая большая карточка главной игры */
+        .main-game-card {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .game-preview {
+            width: 100%;
+            height: 380px;
+            background: #000 url('https://unsplash.com') no-repeat center center/cover;
+            border-radius: 6px;
+            position: relative;
+            border: 2px solid #3d2b1f;
+        }
+
+        .ue5-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #1a120b;
+            color: #f2e6d0;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #d97724;
+        }
+
+        .game-info-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+        }
+
+        .game-info-text h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .game-info-text p {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Кнопки скачивания под главной игрой */
+        .download-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .btn-store {
+            background: #1a120b;
+            color: #f2e6d0;
+            text-decoration: none;
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #3d2b1f;
+            transition: all 0.3s;
+        }
+
+        .btn-store:hover {
+            background: #3d2b1f;
+            color: #ffffff;
+            border-color: #d97724;
+        }
+
+        /* Правая колонка с другими играми */
+        .side-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .side-card {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .side-card-img {
+            width: 100%;
+            height: 140px;
+            background: #3d2b1f;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            border: 1px solid #3d2b1f;
+        }
+
+        .side-card h3 {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .btn-itch {
+            display: block;
+            background: #8c2d19;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .btn-itch:hover {
+            background: #b53c21;
+        }
+
+        /* Нижний блок доната */
+        .donate-bar {
+            max-width: 1160px;
+            margin: 40px auto;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .donate-title h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .donate-buttons-box {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-donate {
+            background: #8c2d19;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .btn-patreon {
+            background: #d97724;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .donate-text-right {
+            font-size: 14px;
+            font-style: italic;
+            max-width: 250px;
+            text-align: right;
+        }
+
+        /* Подвал */
+        footer {
+            max-width: 1200px;
+            margin: 40px auto 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #888;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        footer .tech-logos span {
+            margin-right: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="paper-texture">
+        <div class="logo-area">
+            <div class="logo-main">Ori</div>
+            <div class="logo-sub">World</div>
+        </div>
+        <nav>
+            <a href="file:///C:/Users/ariel/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/index.html#">Games</a>
+            <a href="file:///C:/Users/ariel/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/index.html#">News</a>
+            <a href="file:///C:/Users/ariel/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/index.html#">Community</a>
+            <a href="file:///C:/Users/ariel/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/index.html#">Merch</a>
+            <a href="file:///C:/Users/ariel/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/index.html#">Support</a>
+        </nav>
+    </header>
+
+    <!-- СЛОГАН -->
+    <div class="promo-line">Adventure Awaits | Join the Odyssey</div>
+
+    <!-- ОСНОВНОЙ БЛОК -->
+    <main class="main-container">
+        
+        <!-- Левая сторона: Главная игра -->
+        <div class="main-game-card paper-texture">
+            <div class="game-preview">
+                <div class="ue5-badge">UE5</div>
+                <div class="game-info-text">
+                    <h2>Sea of Dreams - Now in Development</h2>
+                    <p>Experience development on Unreal Engine 5</p>
+                </div>
+            </div>
+            <div class="download-buttons">
+                <a href="file:///C:/Users/ariel/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/index.html#" class="btn-store">Available in Steam</a>
+                <a href="file:///C:/Users/ariel/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/index.html#" class="btn-store">Download on Google Play</a>
+            </div>
+        </div>
+
+        <!-- Правая сторона: Другие проекты -->
+        <div class="side-column">
+            
+            <div class="side-card paper-texture">
+                <div class="side-card-img" style="background: url('https://unsplash.com') center/cover;"></div>
+                <h3>Island Chronicles</h3>
+                <a href="file:///C:/Users/ariel/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/index.html#" class="btn-itch">Follow on itch.io</a>
+            </div>
+
+            <div class="side-card paper-texture">
+                <div class="side-card-img" style="background: url('https://unsplash.com') center/cover;"></div>
+                <h3>Spirit Voyage</h3>
+                <a href="file:///C:/Users/ariel/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/index.html#" class="btn-itch">Follow on itch.io</a>
+            </div>
+
+</div></main></body></html>
